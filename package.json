@@ -1,18 +1,23 @@
 {
-  "name": "@quipucords-root/react-table-batteries-root",
+  "name": "@quipucords-root/react-table-batteries-root", 
   "private": true,
   "version": "0.0.0",
   "description": "This library provides patternfly extensions",
+  "main": "packages/module/dist/esm/index.js",
+  "module": "packages/module/dist/esm/index.js",
+  "types": "packages/module/dist/esm/index.d.ts",
   "license": "MIT",
   "workspaces": [
     "packages/*"
   ],
   "scripts": {
     "build": "yarn workspace @quipucords/react-table-batteries build",
-    "build:docs": "yarn workspace @quipucords/react-table-batteries docs:build",
+    "build:docs": "yarn workspace @quipucords/react-table-batteries docs:build", 
     "build:fed:packages": "yarn workspace @quipucords/react-table-batteries build:fed:packages",
     "start": "yarn build && concurrently --kill-others \"yarn workspace @quipucords/react-table-batteries docs:develop\"",
     "serve:docs": "yarn workspace @quipucords/react-table-batteries docs:serve",
+    "postinstall": "yarn install --cwd packages/module && yarn workspace @quipucords/react-table-batteries build",
+    "pack:release": "cd packages/module && yarn build && npm pack",
     "clean": "yarn workspace @quipucords/react-table-batteries clean",
     "lint:js": "node --max-old-space-size=4096 node_modules/.bin/eslint packages --ext js,jsx,ts,tsx --cache",
     "lint:md": "yarn eslint packages --ext md --no-eslintrc --config .eslintrc-md.json --cache",
