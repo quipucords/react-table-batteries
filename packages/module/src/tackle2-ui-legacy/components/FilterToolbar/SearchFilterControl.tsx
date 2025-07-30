@@ -38,7 +38,11 @@ export const SearchFilterControl = <TItem, TFilterCategoryKey extends string>({
       categoryName={category.title}
       showToolbarItem={showToolbarItem}
     >
-      <InputGroup>
+      <InputGroup 
+        role="group"
+        onPointerEnterCapture={undefined}
+        onPointerLeaveCapture={undefined}
+      >
         <TextInput
           name={inputId}
           id={inputId}

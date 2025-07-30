@@ -55,7 +55,10 @@ export const useTrWithBatteries = <
   const { selection, expansion, activeItem, propHelpers, numColumnsBeforeData, numColumnsAfterData } = batteries;
   const TrWithBatteries = useDeepCompareMemo(
     () =>
-      React.forwardRef(
+      React.forwardRef<
+        HTMLTableRowElement,
+        Omit<TrWithBatteriesHeaderRowProps, 'ref'> | Omit<TrWithBatteriesBodyRowProps<TItem>, 'ref'>
+      >(
         (
           props: Omit<TrWithBatteriesHeaderRowProps, 'ref'> | Omit<TrWithBatteriesBodyRowProps<TItem>, 'ref'>,
           ref: React.Ref<HTMLTableRowElement>
