@@ -3,18 +3,23 @@ import * as React from 'react';
 type StorageType = 'localStorage' | 'sessionStorage';
 
 const getValueFromStorage = <T>(storageType: StorageType, key: string, defaultValue: T): T => {
-  if (typeof window === 'undefined') return defaultValue;
+  if (typeof window === 'undefined') {
+    return defaultValue;
+  }
   try {
     const itemJSON = window[storageType].getItem(key);
     return itemJSON ? (JSON.parse(itemJSON) as T) : defaultValue;
   } catch (error) {
+    // eslint-disable-next-line no-console
     console.error(error);
     return defaultValue;
   }
 };
 
 const setValueInStorage = <T>(storageType: StorageType, key: string, newValue: T | undefined) => {
-  if (typeof window === 'undefined') return;
+  if (typeof window === 'undefined') {
+    return;
+  }
   try {
     if (newValue !== undefined) {
       const newValueJSON = JSON.stringify(newValue);
@@ -31,6 +36,7 @@ const setValueInStorage = <T>(storageType: StorageType, key: string, newValue: T
       }
     }
   } catch (error) {
+    // eslint-disable-next-line no-console
     console.error(error);
   }
 };
@@ -70,7 +76,9 @@ const useStorage = <T>({
   );
 
   React.useEffect(() => {
-    if (!usingStorageEvents) return;
+    if (!usingStorageEvents) {
+      return;
+    }
     const onStorageUpdated = (event: StorageEvent) => {
       if (event.key === key) {
         setCachedValue(event.newValue ? JSON.parse(event.newValue) : defaultValue);
