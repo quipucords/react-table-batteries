@@ -9,3 +9,4 @@ export * from './sorting';
 export * from './pagination';
 export * from './expansion';
 export * from './active-item';
+export * from './storage';

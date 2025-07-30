@@ -29,7 +29,6 @@
     "access": "public"
   },
   "dependencies": {
-    "@migtools/lib-ui": "^10.0.1",
     "@patternfly/react-core": "^5.1.1",
     "use-deep-compare": "^1.1.0"
   },
