@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExtendedButton } from '@patternfly-labs/react-table-batteries';
+import { ExtendedButton } from '@quipucords/react-table-batteries';
 
 export const ExampleAdvancedBYOStateAndLogic: React.FunctionComponent = () => (
   <>

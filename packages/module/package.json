@@ -1,5 +1,5 @@
 {
-  "name": "@patternfly-labs/react-table-batteries",
+  "name": "@quipucords/react-table-batteries",
   "version": "0.0.1",
   "description": "Hooks and components that make it easier to build and maintain featureful and composable PatternFly tables",
   "main": "dist/esm/index.js",
@@ -17,14 +17,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mturley/react-table-batteries.git"
+    "url": "https://github.com/quipucords/react-table-batteries.git"
   },
   "author": "Red Hat",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mturley/react-table-batteries.git/issues"
+    "url": "https://github.com/quipucords/react-table-batteries.git/issues"
   },
-  "homepage": "https://github.com/mturley/react-table-batteries.git#readme",
+  "homepage": "https://github.com/quipucords/react-table-batteries.git#readme",
   "publishConfig": {
     "access": "public"
   },

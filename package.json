@@ -1,5 +1,5 @@
 {
-  "name": "@patternfly-labs/react-table-batteries-root",
+  "name": "@quipucords-root/react-table-batteries-root",
   "private": true,
   "version": "0.0.0",
   "description": "This library provides patternfly extensions",
@@ -8,18 +8,18 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "yarn workspace @patternfly-labs/react-table-batteries build",
-    "build:docs": "yarn workspace @patternfly-labs/react-table-batteries docs:build",
-    "build:fed:packages": "yarn workspace @patternfly-labs/react-table-batteries build:fed:packages",
-    "start": "yarn build && concurrently --kill-others \"yarn workspace @patternfly-labs/react-table-batteries docs:develop\"",
-    "serve:docs": "yarn workspace @patternfly-labs/react-table-batteries docs:serve",
-    "clean": "yarn workspace @patternfly-labs/react-table-batteries clean",
+    "build": "yarn workspace @quipucords/react-table-batteries build",
+    "build:docs": "yarn workspace @quipucords/react-table-batteries docs:build",
+    "build:fed:packages": "yarn workspace @quipucords/react-table-batteries build:fed:packages",
+    "start": "yarn build && concurrently --kill-others \"yarn workspace @quipucords/react-table-batteries docs:develop\"",
+    "serve:docs": "yarn workspace @quipucords/react-table-batteries docs:serve",
+    "clean": "yarn workspace @quipucords/react-table-batteries clean",
     "lint:js": "node --max-old-space-size=4096 node_modules/.bin/eslint packages --ext js,jsx,ts,tsx --cache",
     "lint:md": "yarn eslint packages --ext md --no-eslintrc --config .eslintrc-md.json --cache",
     "lint": "yarn lint:js && yarn lint:md",
     "test": "TZ=EST jest packages",
-    "test:a11y": "yarn workspace @patternfly-labs/react-table-batteries test:a11y",
-    "serve:a11y": "yarn workspace @patternfly-labs/react-table-batteries serve:a11y"
+    "test:a11y": "yarn workspace @quipucords/react-table-batteries test:a11y",
+    "serve:a11y": "yarn workspace @quipucords/react-table-batteries serve:a11y"
   },
   "devDependencies": {
     "@babel/core": "^7.23.2",

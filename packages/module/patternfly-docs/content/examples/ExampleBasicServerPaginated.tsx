@@ -9,7 +9,7 @@ import {
   ActiveSort,
   useTablePropHelpers,
   useTableState
-} from '@patternfly-labs/react-table-batteries';
+} from '@quipucords/react-table-batteries';
 
 // This example table's rows represent Thing objects in our fake API.
 interface Thing {

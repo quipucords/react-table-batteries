@@ -1,7 +1,7 @@
 import React from 'react';
 import { ToolbarContent, EmptyState, EmptyStateIcon, Title } from '@patternfly/react-core';
 import CubesIcon from '@patternfly/react-icons/dist/esm/icons/cubes-icon';
-import { useClientTableBatteries, ConditionalTableBody, FilterType } from '@patternfly-labs/react-table-batteries';
+import { useClientTableBatteries, ConditionalTableBody, FilterType } from '@quipucords/react-table-batteries';
 
 // This example table's rows represent Thing objects in our fake API.
 interface Thing {
