@@ -4,6 +4,7 @@
   "description": "Hooks and components that make it easier to build and maintain featureful and composable PatternFly tables",
   "main": "dist/esm/index.js",
   "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
   "scripts": {
     "build": "tsc --build --verbose ./tsconfig.json",
     "build:fed:packages": "node generate-fed-package-json.js",
