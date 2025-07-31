@@ -16,7 +16,6 @@
     "build:fed:packages": "yarn workspace @quipucords/react-table-batteries build:fed:packages",
     "start": "yarn build && concurrently --kill-others \"yarn workspace @quipucords/react-table-batteries docs:develop\"",
     "serve:docs": "yarn workspace @quipucords/react-table-batteries docs:serve",
-    "postinstall": "yarn install --cwd packages/module && yarn workspace @quipucords/react-table-batteries build",
     "pack:release": "cd packages/module && yarn build && npm pack",
     "clean": "yarn workspace @quipucords/react-table-batteries clean",
     "lint:js": "node --max-old-space-size=4096 node_modules/.bin/eslint packages --ext js,jsx,ts,tsx --cache",
